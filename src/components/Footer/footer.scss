@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+
+footer {
+    @include pos-fixed($top-or-bot: bottom);
+    height: 110px;
+    background: #dfe6ed;
+    align-items: center;
+    padding-inline: 10px;
+    gap: 10px;
+
+    img {
+        height: 90px;
+        border: 5px white solid;
+        border-radius: 3px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+
+        h1 {
+            color: #293845;
+            line-height: 30px;
+            padding-bottom: 10px;
+            font-size: 18px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@mixin h1-title {
+    margin-block: 35px;
+    font-size: 21px;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+@mixin page-wrapper($header: 67px, $footer: 0px) {
+    padding-top: $header;
+    padding-bottom: $footer;
+    width: 100%;
+    min-height: 100vh;
+}
+
+@mixin pos-fixed($top-or-bot: top, $display: flex) {
+    position: fixed;
+    #{$top-or-bot}: 0px;
+    width: 100%;
+    left: 0;
+    display: $display;
+}

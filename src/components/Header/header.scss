@@ -1,0 +1,15 @@
+@import "../../styles/mixins";
+
+header {
+    background: #c3cfd9;
+    height: 67px;
+    @include pos-fixed($top-or-bot: top);
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 34px;
+        font-weight: 400;
+        color: #e8833a;
+    }
+}
