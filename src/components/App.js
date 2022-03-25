@@ -5,6 +5,7 @@ import Header from "./Header/Header";
 import Sessions from "./Sessions/Sessions";
 
 import "../styles/globals.scss";
+import Seats from "./Seats/Seats";
 
 export default function App() {
     return (
@@ -13,7 +14,8 @@ export default function App() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/filme/:idSession" element={<Sessions />} />
+                    <Route path="/filme/:idMovie" element={<Sessions />} />
+                    <Route path="/sessao/:idSession" element={<Seats />} />
                 </Routes>
             </BrowserRouter>
         </>

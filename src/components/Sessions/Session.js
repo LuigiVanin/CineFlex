@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Session(props) {
     const { weekday, date, showtimes } = { ...props.session };
 
@@ -7,12 +9,12 @@ export default function Session(props) {
                 {weekday} - {date}
             </h1>
             <div className="time-box">
-                {/* <button>15:00</button>
-                <button>15:00</button>
-                <button>15:00</button>
-                <button>15:00</button> */}
                 {showtimes.map((item) => {
-                    return <button>{item.name}</button>;
+                    return (
+                        <Link to={`/sessao/${item.id}`} key={item.id}>
+                            {item.name}
+                        </Link>
+                    );
                 })}
             </div>
         </div>

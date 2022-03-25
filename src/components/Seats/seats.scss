@@ -1,0 +1,123 @@
+@import "../../styles/mixins";
+
+.session-page {
+    @include page-wrapper($footer: 100px);
+    display: flex;
+    justify-content: center;
+}
+
+.seat {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #c3cfd9;
+    border: 1px solid #808f9d;
+}
+
+.seat-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        @include h1-title;
+        margin-bottom: 20px;
+    }
+
+    .seats-box {
+        width: 100%;
+
+        // background: red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // gap: 2%;
+
+        .seat-wrapper {
+            width: calc(100% / 10);
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .seat {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .legend {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 6px;
+        margin-bottom: 45px;
+
+        .legend-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+
+            p {
+                font-size: 16px;
+                letter-spacing: -0.013em;
+                color: #4e5a65;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        h1 {
+            margin: 0;
+            width: 100%;
+            text-align: left;
+            font-size: 18px;
+            line-height: 20px;
+            color: #293845;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            padding-inline: 15px;
+            font-size: 14px;
+            margin-bottom: 5px;
+            outline: none;
+            border: 1px solid #d5d5d5;
+            &::placeholder {
+                font-style: italic;
+            }
+        }
+
+        button {
+            width: 200px;
+            font-size: 16px;
+            height: 38px;
+            margin-top: 25px;
+            background: #e8833a;
+            border-radius: 3px;
+            border: none;
+            color: white;
+        }
+    }
+}
+
+.selecionado {
+    background: #8dd7cf;
+    border: 1px solid #1aae9e;
+}
+
+.indisponivel {
+    background: #fbe192;
+    border: 1px solid #f7c52b;
+}

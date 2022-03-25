@@ -1,12 +1,21 @@
 import "./footer.scss";
 
 export default function Footer(props) {
-    console.log(props);
+    const { title, src, time, weekday } = props;
+    const buildTimeInfo =
+        weekday === undefined || time === undefined ? (
+            <></>
+        ) : (
+            <p>
+                {weekday} - {time}
+            </p>
+        );
     return (
         <footer>
-            <img src={props.src} alt={props.title} />
+            <img src={src} alt={title} />
             <div className="info">
-                <h1>{props.title}</h1>
+                <h1>{title}</h1>
+                {buildTimeInfo}
             </div>
         </footer>
     );

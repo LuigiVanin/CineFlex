@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .sessions {
-    @include page-wrapper($footer: 117px);
+    @include page-wrapper($footer: 112px);
     h1.title {
         @include h1-title;
     }
@@ -38,7 +38,7 @@
                 flex-wrap: wrap;
                 gap: 6px;
 
-                button {
+                a {
                     width: 67px;
                     height: 35px;
                     border: none;
@@ -46,6 +46,10 @@
                     font-size: 15px;
                     background: #e8833a;
                     border-radius: 3px;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         }
