@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
-.session-page {
-    @include page-wrapper($footer: 100px);
+.bookmark-page {
+    @include page-wrapper($footer: 125px);
     display: flex;
     justify-content: center;
 }
@@ -71,13 +71,14 @@
         }
     }
 
-    .form {
+    form {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        h1 {
+        h1,
+        label {
             margin: 0;
             width: 100%;
             text-align: left;
@@ -99,15 +100,10 @@
             }
         }
 
-        button {
+        .btn {
             width: 200px;
-            font-size: 16px;
-            height: 38px;
             margin-top: 25px;
-            background: #e8833a;
-            border-radius: 3px;
-            border: none;
-            color: white;
+            @include btn-design(38px);
         }
     }
 }

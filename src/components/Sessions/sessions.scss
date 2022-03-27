@@ -17,7 +17,6 @@
             padding-block: 5px;
             width: 90%;
             min-height: 95px;
-            // background: rgb(40, 92, 202);
 
             h1 {
                 text-align: left;
@@ -33,23 +32,12 @@
                 width: 100%;
                 display: flex;
                 justify-content: left;
-                // background-color: chartreuse;
-
                 flex-wrap: wrap;
                 gap: 6px;
 
                 a {
                     width: 67px;
-                    height: 35px;
-                    border: none;
-                    color: white;
-                    font-size: 15px;
-                    background: #e8833a;
-                    border-radius: 3px;
-                    text-decoration: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    @include btn-design;
                 }
             }
         }

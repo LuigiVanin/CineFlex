@@ -19,3 +19,17 @@
     left: 0;
     display: $display;
 }
+
+@mixin btn-design($height: 35px) {
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 15px;
+    background: #e8833a;
+    border-radius: 3px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $height;
+}

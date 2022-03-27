@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function Seat(props) {
-    const { num, isAvailable } = props;
+    const { num, isAvailable, id, updateSeatsState } = props;
     const [status, setStatus] = useState("");
     return (
         <div className="seat-wrapper">
@@ -9,15 +9,15 @@ function Seat(props) {
                 className={`seat ${
                     isAvailable ? "" : "indisponivel"
                 } ${status}`}
-                onClick={(eent) => {
+                onClick={() => {
                     if (!isAvailable) return;
                     if (status === "") {
                         setStatus("selecionado");
-                        return;
-                    }
-                    if (status !== "") {
+                    } else if (status !== "") {
                         setStatus("");
                     }
+                    console.log(id);
+                    updateSeatsState(id, num);
                 }}
             >
                 {num}
