@@ -16,7 +16,6 @@ function Seat(props) {
                     } else if (status !== "") {
                         setStatus("");
                     }
-                    console.log(id);
                     updateSeatsState(id, num);
                 }}
             >

@@ -46,14 +46,11 @@ export default function Seats() {
             alert("O CPF deve ter 11 dígitos!");
             return;
         }
-        console.log(order);
-        console.log(seats);
         const promise = axios.post(
             "https://mock-api.driven.com.br/api/v5/cineflex/seats/book-many",
             { ...order }
         );
         promise.then((response) => {
-            console.log(response);
             navigate("/sucesso", {
                 state: {
                     order: { ...order },
@@ -76,7 +73,6 @@ export default function Seats() {
             `https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSession}/seats`
         );
         promise.then((response) => {
-            console.log(response.data);
             setSession({ ...response.data });
         });
         promise.catch((err) => console.log(err.response));

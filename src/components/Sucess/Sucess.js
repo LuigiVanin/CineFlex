@@ -3,7 +3,6 @@ import "./sucess.scss";
 
 function Sucess() {
     const { state } = useLocation();
-    console.log(useLocation());
     return (
         <div className="sucess-page">
             <h1>Pedido feito com sucesso!</h1>

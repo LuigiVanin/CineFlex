@@ -15,7 +15,6 @@ export default function Home() {
         promise.catch((err) => console.log(err));
     }, []);
 
-    console.log(movies);
     return (
         <div className="home">
             <h1>Selecione Um filme</h1>

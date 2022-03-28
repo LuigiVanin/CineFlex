@@ -27,12 +27,9 @@
 
     .seats-box {
         width: 100%;
-
-        // background: red;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        // gap: 2%;
 
         .seat-wrapper {
             width: calc(100% / 10);

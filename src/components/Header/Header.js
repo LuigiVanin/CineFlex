@@ -4,7 +4,6 @@ import "./header.scss";
 export default function Header() {
     const location = useLocation();
     const navigate = useNavigate();
-    console.log("aqui: ", location);
     return (
         <header>
             {location.pathname !== "/" ? (

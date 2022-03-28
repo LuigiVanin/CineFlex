@@ -23,8 +23,6 @@ export default function Sessions() {
         promise.catch((err) => console.log(err));
     }, [idMovie]);
 
-    console.log(sessions);
-
     return (
         <>
             <div className="sessions">
